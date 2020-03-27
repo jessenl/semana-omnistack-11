@@ -32,7 +32,7 @@ export default function Profile() {
         } catch (err) {
             alert('Erro ao deletar caso. Tente outra vez');
         }
-        setIncidents(incidents.filter(incident => incident.id != id));
+        setIncidents(incidents.filter(incident => incident.id !== id));
     }
 
     function handleLogout() {
