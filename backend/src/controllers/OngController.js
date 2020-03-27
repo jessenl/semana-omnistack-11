@@ -7,12 +7,12 @@ module.exports = {
         return response.json(ongs);
     },
     async create(request, response) {
-        const {nome, email, whatsapp, city, uf} = request.body;
+        const {name, email, whatsapp, city, uf} = request.body;
         const id = crypto.randomBytes(4).toString('HEX');
 
         await connection('ongs').insert({
             id: id, 
-            name: nome,
+            name: name,
             email: email,
             whatsapp: whatsapp,
             city: city,
